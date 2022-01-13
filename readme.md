@@ -66,3 +66,9 @@ FROM stocks
 ORDER BY stock_value DESC, created_at ASC
 LIMIT 30;
 ```
+
+Use hash indexes for equality columns
+
+```mysql
+CREATE UNIQUE INDEX orders_uuid USING HASH ON orders (uuid);
+```
